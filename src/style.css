@@ -5,6 +5,7 @@
   --purple: #6a3dff;
   --green: #066a31;
   --orange: #e86607;
+  --blue: #75e8ff;
   --used-padding: 1.5em;
   --heading-size: 3rem;
   --heading-weight: 500;
@@ -67,6 +68,7 @@ body {
   transition: all 0.2s ease-in-out;
   position: relative;
   z-index: 5;
+  
 }
 
 .about-me-heading::before {
@@ -126,7 +128,7 @@ body {
     animation-name: scale-up;
     animation-duration: .5s;
     transition: all .5 ease-in-out;
-    box-shadow: -4px 4px var(--purple);
+    box-shadow: -4px 4px var(--blue);
     display: flex;
     align-items: center;
     font-size: 2em;
@@ -152,6 +154,7 @@ body {
 
 
 .experience {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 50em;
@@ -214,9 +217,8 @@ body {
   top: 5em; 
   left: 0; 
   width: 5px; 
-  height: 4em; 
+  height: 5em; 
 }
-
 
 .work-experience-heading {
   font-size: 2.5rem;
@@ -225,6 +227,17 @@ body {
   position: relative;
   width: 75%;
 }
+
+/* .work-experience-heading::before {
+  content: '';
+  position: absolute;
+  background-color: #e86607;
+  width: 1.6em;
+  height: 0.2em;
+  top: 0.9em;
+  left: 0.3em;
+  z-index: -1;
+} */
 
 
 .work-experience-list {
@@ -272,9 +285,20 @@ body {
   width: 75%;
 }
 
+/* .education-heading::before {
+  content: '';
+  position: absolute;
+  background-color: #e86607;
+  width: 3.6em;
+  height: 0.1em;
+  top: 37px;
+  left: 0.2em;
+  z-index: -1;
+} */
+
 
 .education-list {
-  padding-left: 1em;
+  padding-left: 1.5em;
   
 }
 
@@ -296,9 +320,10 @@ body {
 
 @keyframes heading-automation {
   from {
-    width: 0%;
+    width: 0;
   }
   to {
-    width: 50%;
+    width: 3.5em;
+    ;
   }
 }
