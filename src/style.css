@@ -35,6 +35,33 @@ body {
 
   grid-template-columns: 1fr;
   grid-template-rows: auto;
+  position: relative;
+}
+
+/* body::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  z-index: 10;
+} */
+
+.body-active {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  z-index: 10;
+  animation-name: intro-overlay-animation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
 }
 
 .header-container {
@@ -50,7 +77,7 @@ body {
   flex-direction: column;
   gap: 2.5em;
   padding: 0 var(--used-padding) 0 var(--used-padding);
-  height: 50em;
+  height: 88vh;
   background-color: var(--yellow);
 }
 
@@ -59,8 +86,12 @@ body {
   scale: 0.1;
   top: 20em;
   left: 5em;
-  
+  animation-name: design-asset-1-animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
+
 .about-me-heading {
   font-size: var(--heading-size);
   font-weight: var(--heading-weight);
@@ -86,8 +117,8 @@ body {
   animation-iteration-count: 1;
 }
 
-/* .about-me-heading:hover {
-  text-shadow: -5px 5px var(--purple);
+/* .active-heading-animation {
+
 } */
 
 .about-me-first {
@@ -325,5 +356,24 @@ body {
   to {
     width: 3.5em;
     ;
+  }
+}
+
+@keyframes design-asset-1-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes intro-overlay-animation {
+  from {
+    right: 0;
+  }
+  to {
+    right: 100%;
+    transform: skewX(90deg);
   }
 }
