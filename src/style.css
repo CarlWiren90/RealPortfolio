@@ -1,0 +1,300 @@
+:root {
+  --yellow: #ffec3f;
+  --white: #ffff;
+  --black: #000000;
+  --purple: #6a3dff;
+  --green: #066a31;
+  --orange: #e86607;
+  --used-padding: 1.5em;
+  --heading-size: 3rem;
+  --heading-weight: 500;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Afacad flux';
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "aboutme"
+  "experience"
+  "portfolio"
+  "skills"
+  "footer"
+  ;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: header;
+  height: 2em;
+  background-color: var(--yellow);
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  padding: 0 var(--used-padding) 0 var(--used-padding);
+  height: 50em;
+  background-color: var(--yellow);
+}
+
+.design-asset-1 {
+  position: absolute;
+  scale: 0.1;
+  top: 20em;
+  left: 5em;
+  
+}
+.about-me-heading {
+  font-size: var(--heading-size);
+  font-weight: var(--heading-weight);
+  padding-top: 1em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  z-index: 5;
+}
+
+.about-me-heading::before {
+  content: '';
+  position: absolute;
+  background-color: #75e8ff;
+  width: 50%;
+  height: 15%;
+  top: 1.7em;
+  left: 0.3em;
+  z-index: -1;
+  animation-name: heading-automation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+/* .about-me-heading:hover {
+  text-shadow: -5px 5px var(--purple);
+} */
+
+.about-me-first {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+
+.carl {
+  font-weight: 400;
+}
+
+.frontend-developer {
+  font-weight: 600;
+}
+
+.about-me-second {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2.1rem;
+}
+
+.typescript, .javascript, .css {
+  font-weight: 600;
+}
+
+
+.get-in-touch-button {
+  position: relative;
+    max-height: 50px;
+    max-width: 200px;
+    border: 1px solid black;
+    text-align: center;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    animation-name: scale-up;
+    animation-duration: .5s;
+    transition: all .5 ease-in-out;
+    box-shadow: -4px 4px var(--purple);
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 400;
+    background-color: transparent;
+}
+
+.get-in-touch-button:hover {
+  background-color: var(--black);
+  color: var(--yellow);
+}
+
+.experience-wrapper {
+  background-color: var(--purple);
+  width: 100%;
+  height: 70%;
+  margin-top: 3em;
+  padding: 0 var(--used-padding) 0 var(--used-padding);
+  position: relative;
+  z-index: 3;
+}
+
+/* .experience-wrapper::before {
+  content: '';
+  width: 85%;
+  padding: 1em;
+  height: 100%;
+  position: absolute;
+  left: -15px;
+  top: -4em;
+  border: 15px solid var(--yellow);
+  z-index: -2;
+}
+
+.experience-wrapper::after {
+  content: '';
+  width: 89.5%;
+  padding: 1em;
+  height: 100%;
+  position: absolute;
+  left: -20px;
+  top: -3.1em;
+  border: 15px solid var(--orange);
+  z-index: -2;
+} */
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  height: 50em;
+  gap: 1em;
+  width: 100%;
+  /* padding: 0 var(--used-padding) 0 var(--used-padding); */
+ /*  background-color: var(--black); */
+ background-color: var(--purple);
+}
+
+.experience-heading {
+  font-size: var(--heading-size);
+  font-weight: var(--heading-weight);
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+  height: 1.5em;
+}
+
+
+.experience-heading::before {
+  content: '';
+  position: absolute;
+  background-color: #e86607;
+  width: 50%;
+  height: 20%;
+  top: 0.8em;
+  left: 0.3em;
+  z-index: -1;
+  animation-name: heading-automation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+
+.work-experience-section {
+  height: 12em;
+  width: 100%;
+}
+
+.work-experience-heading {
+  font-size: 2.5rem;
+  color: var(--white);
+  font-weight: 400;
+  position: relative;
+/*   background-color: var(--yellow);
+ */  width: 75%;
+}
+
+.work-experience-heading::after {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-bottom: var(--white) 0.5px solid;
+  color: var(--white);
+}
+
+.work-experience-list {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: var(--white);
+  height: 100%;
+}
+
+.experience-section {
+  height: 15em;
+  width: 100%;
+  padding-left: 2em;
+}
+
+.education-section {
+  margin-top: -2em;
+  height: 40em;
+  width: 100%;
+  color: var(--white);
+}
+
+.education-heading {
+  position: relative;
+  font-size: 2.5rem;
+  color: var(--white);
+  font-weight: 400;
+/*   background-color: var(--yellow);
+ */  width: 75%;
+}
+
+.education-heading::after {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-bottom: var(--white) 0.1px solid;
+}
+
+.school-name {
+  margin-top: 15px;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.program-name {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.year-span {
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+@keyframes heading-automation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
