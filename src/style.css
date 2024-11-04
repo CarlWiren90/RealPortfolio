@@ -73,7 +73,7 @@ body {
   content: '';
   position: absolute;
   background-color: #75e8ff;
-  width: 50%;
+  width: 3.5em;
   height: 15%;
   top: 1.7em;
   left: 0.3em;
@@ -149,29 +149,7 @@ body {
   z-index: 3;
 }
 
-/* .experience-wrapper::before {
-  content: '';
-  width: 85%;
-  padding: 1em;
-  height: 100%;
-  position: absolute;
-  left: -15px;
-  top: -4em;
-  border: 15px solid var(--yellow);
-  z-index: -2;
-}
 
-.experience-wrapper::after {
-  content: '';
-  width: 89.5%;
-  padding: 1em;
-  height: 100%;
-  position: absolute;
-  left: -20px;
-  top: -3.1em;
-  border: 15px solid var(--orange);
-  z-index: -2;
-} */
 
 .experience {
   display: flex;
@@ -182,6 +160,14 @@ body {
   /* padding: 0 var(--used-padding) 0 var(--used-padding); */
  /*  background-color: var(--black); */
  background-color: var(--purple);
+}
+
+.white-line {
+  position: absolute;
+  top:1265px;
+  left: 25px;
+  z-index: 4;
+  height: 115px;
 }
 
 .experience-heading {
@@ -198,7 +184,7 @@ body {
   content: '';
   position: absolute;
   background-color: #e86607;
-  width: 50%;
+  width: 3.9em;
   height: 20%;
   top: 0.8em;
   left: 0.3em;
@@ -211,35 +197,42 @@ body {
 
 
 .work-experience-section {
+  position: relative;
+  padding-top: 1em;
   height: 12em;
   width: 100%;
+  border: 2px solid transparent; 
 }
+
+.work-experience-section::before, .work-experience-section::after {
+  content: '';
+  position: absolute;
+  background-color: var(--orange); 
+}
+
+.work-experience-section::before {
+  top: 5em; 
+  left: 0; 
+  width: 5px; 
+  height: 4em; 
+}
+
 
 .work-experience-heading {
   font-size: 2.5rem;
   color: var(--white);
   font-weight: 400;
   position: relative;
-/*   background-color: var(--yellow);
- */  width: 75%;
+  width: 75%;
 }
 
-.work-experience-heading::after {
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-bottom: var(--white) 0.5px solid;
-  color: var(--white);
-}
 
 .work-experience-list {
   margin-top: 10px;
   font-size: 1.5rem;
   color: var(--white);
-  height: 100%;
+  height: 3em;
+  padding-left: 1em;
 }
 
 .experience-section {
@@ -248,11 +241,27 @@ body {
   padding-left: 2em;
 }
 
+
 .education-section {
-  margin-top: -2em;
-  height: 40em;
+  position: relative;
+  margin-top: 2em;
+  height: 20em;
   width: 100%;
   color: var(--white);
+  border: 2px solid transparent;
+}
+
+.education-section::before, .education-section::after {
+  content: '';
+  position: absolute;
+  background-color: var(--orange); 
+}
+
+.education-section::after {
+  bottom: 2.5em;
+  left: 0; 
+  width: 5px;
+  height: 13em; 
 }
 
 .education-heading {
@@ -260,18 +269,13 @@ body {
   font-size: 2.5rem;
   color: var(--white);
   font-weight: 400;
-/*   background-color: var(--yellow);
- */  width: 75%;
+  width: 75%;
 }
 
-.education-heading::after {
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-bottom: var(--white) 0.1px solid;
+
+.education-list {
+  padding-left: 1em;
+  
 }
 
 .school-name {
